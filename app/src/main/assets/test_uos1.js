@@ -622,7 +622,7 @@ function serialNumberFn(){
 function sendPeRequest(serialNumber, params, methodName) {
   if (navigator.userAgent == 'UlordUosAndroid') {
     window.DappJsBridge.pushMessage(serialNumber, params, methodName);
-  } else if (navigator.userAgent == 'PocketUosIos') {
+  } else if (navigator.userAgent == 'UlordUosIos') {
     window.webkit.messageHandlers.pushMessage.postMessage({
       'params': params,
       'serialNumber': serialNumber,
@@ -1044,7 +1044,7 @@ var IdentityPE = function IdentityPE(account) {
 
   this.hash = '1df7bb65ad53a9eb89b4327a56b1200f3abaf085ffec00af222b9eb7622b0734';
   this.publicKey = 'UOS8NJX2UzUFvbAYH7y1KoZpAAP3zjincBaZnDsuvjQQ4VD1KRLeG';
-  this.name = 'pocketUOS';
+  this.name = 'UlordUOS';
   this.accounts = [{
     name: account,
     authority: 'active',
